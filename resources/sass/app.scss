@@ -1,0 +1,149 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+body{
+    background-color: rgb(128,128,128);
+}
+#avatarImgs{
+    width: 90px;
+    height: 90px;
+}
+.py-4{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#username{
+    margin-left: 1px;
+}
+#user{
+    background-color: #4a5568;
+    width: 130px;
+    height: 140px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+
+    border-radius:10px;
+}
+
+#user p{
+    margin-bottom: 0px;
+}
+#user:hover{
+    boder: 1px solid;
+    background-color: #a0aec0;
+}
+#mainContent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+#moderatorsContent{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+#contentCuUseri{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+}
+
+#userModerator{
+    background-color: rgb(60,74,74);
+    width: 130px;
+    height: 185px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+    border-radius:10px;
+}
+
+#userModerator:hover{
+    boder: 1px solid;
+    background-color:rgb(33,37,41);
+}
+
+a{
+    text-decoration: none;
+}
+
+#createForm{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 15px;
+    margin: auto;
+
+    input,select,button{
+        border-radius: 3px;
+        outline: none;
+        border: none;
+        padding: 5px;
+        background-color: gainsboro;
+        color: rgb(74,85,104);
+    }
+    button:hover{
+        background-color: rgb(74,85,104);
+        border: 1px solid;
+        color: white;
+    }
+
+}
+
+#profilulUtilizatorului{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+//
+#avatarImgsAdmin{
+    width: 30px !important;
+}
+
+#itemMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #718096;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+#linksToOtherPages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* To vertically center the buttons */
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+#navbarNavv{
+    margin-bottom: 15px;
+}
