@@ -18,13 +18,46 @@
 </head>
 <body>
 
+    @auth
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarNavv">
 
+                    <div class="collapse navbar-collapse" id="navbarNav">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/"> &larr; Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('MainController.store')}}"> All items page </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('MainController.create')}}"> Create items </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('MainController.showAllModerators')}}"> View all Moderators </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('ShowAllModeratorsController.showAllAdmins')}}"> View all Admins </a>
+                            </li>
+
+                            @can('view', auth()->user())
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('admin.users.index')}}"> ADMINS PAGE </a>
+                                </li>
+                            @endcan
+
+                        </ul>
+                    </div>
+                </nav>
+                @endauth
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

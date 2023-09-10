@@ -11,13 +11,14 @@ use App\Models\UtilizatoriSubiecte;
 class EditItemController extends BaseController
 {
     public function __invoke($id){
-
+        dd($id);
         $elementulDeEditat = Utilizatori::where("id", $id)->first();
         $toateGenurile = Utilizatori::select("gen")->distinct()->get();
         $toateImputernicirile = Permisiuni::all();
 
         $toateSubiectele = Subiecte::all();
         $idulSubiectelorUtilizatorului = UtilizatoriSubiecte::where("utilizator_id", $id)->pluck('subiecte_id');
+
         $subiecteleUtilizatorului = Subiecte::whereIn("id", $idulSubiectelorUtilizatorului)->get();
 
         return view("/edit", ["elementulDeEditat" =>$elementulDeEditat,

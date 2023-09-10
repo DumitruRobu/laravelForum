@@ -19,7 +19,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [App\Http\Controllers\HomeController::class, "index"])->name("MainController.main");
 //Route::get('/', 'App\Http\Controllers\AllControllers\IndexController')->name("MainController.main");
 
-Route::group(['namespace' => 'App\Http\Controllers\AllControllers'], function(){
+Route::group(['namespace' => 'App\Http\Controllers\AllControllers', 'middleware'=>'users'], function(){
 
 
     Route::get('/items', 'DisplayItemsController')->name("MainController.items");

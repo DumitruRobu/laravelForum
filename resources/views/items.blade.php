@@ -3,10 +3,10 @@
 
 @section("content")
 
-    <div id="linksToOtherPages">
-        <div> <a href="/"><button>&larr; Home</button></a></div>
-        <div> <a href="/admin/users"><button>&rarr; Admins Page</button></a></div>
-    </div>
+{{--    <div id="linksToOtherPages">--}}
+{{--        <div> <a href="/"><button>&larr; Home</button></a></div>--}}
+{{--        <div> <a href="/admin/users"><button>&rarr; Admins Page</button></a></div>--}}
+{{--    </div>--}}
 
     <div id="mainContent">
 
